@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: zuul-test
+  cloud:
+    consul:
+      enabled: true
+      host: 192.168.154.14
+      port: 8500
+      discovery:
+        health-check-path: /health
+        health-check-interval: 10s
+        prefer-ip-address: true
+        tags: lyuf-test
+        health-check-critical-timeout: 5m
+
+
+### 网关配置
+#zuul:
+#  # 忽略所有包括/demo/的路径
+#  ignoredPatterns: /**/demo/**
+#  # 使用'*'可忽略所有微服务
+#  ignored-services: '*'
+  # 是否移除前缀
+#  stripPrefix: false
+#  routes:
+#    zuul-demo: /demo/**
+    # 该配置方式中，demo只是给路由一个名称，可以任意起名。
+#    user:
+#      serviceId: demo-test
+      # service-id对应的路径
+#      path: /demo/**
+#   使用 prefix 添加全局前缀
+#  prefix: /api

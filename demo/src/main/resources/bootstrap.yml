@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo-test
+  cloud:
+    consul:
+      enabled: true
+      host: 192.168.154.14
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        health-check-interval: 10s
+        prefer-ip-address: true
+        tags: lyuf-test
+        health-check-critical-timeout: 5m

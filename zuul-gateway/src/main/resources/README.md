@@ -1,0 +1,7 @@
+
+1.Zuul配置
+2.在mysql中创建路由信息表
+3.定义CustomRouteLocator类
+4.增加CustomZuulConfig类，主要是为了配置CustomRouteLocator
+5.RefreshRouteService类，用于实现数据库路由信息的刷新
+6.提供RefreshController，提供从浏览器访问的刷新功能
